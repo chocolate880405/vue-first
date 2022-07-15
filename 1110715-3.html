@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="hi">{{message}}</div>
+        <div v-if="loading">載入錯誤1</div>
+        <div v-show="loading">載入錯誤2</div>
+        <!-- show會保留結構，if會直接清除 -->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'hello world!',
+                // loading:true,
+                loading:false
+            }
+        });
+    </script>
+</body>
+</html>
