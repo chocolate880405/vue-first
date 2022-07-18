@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>顏色</h2>
+        <ul>
+            <li v-for="color in colors">
+                {{color}}
+            </li>
+        </ul>
+        <h2>父親</h2>
+        <ul>
+            <li v-for="man in home">
+                {{man.father}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        // var colors = ['blue', 'red', 'black'];
+        // var colorsLen = colors.length;
+        // var str = '';
+        // for (var i = 0;i < colorsLen ;i++ ) {
+        //     str=colors[i];
+        //     console.log(str);
+        // };
+        var app = new Vue({
+            el: '#app',
+            data: {
+                colors: ['blue', 'red', 'black'],
+                home: [
+                    { father: 'tom' },
+                    { father: 'bob' },
+                    { father: 'john' }
+                ]
+            }
+        });
+    </script>
+</body>
+
+</html>

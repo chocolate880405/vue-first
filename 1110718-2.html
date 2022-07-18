@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">
+        1234
+    </h1>
+
+    <div id="app">
+        <h2>顏色</h2>
+        <ul>
+            <li v-for="color in colors">
+                {{color}}
+            </li>
+        </ul>
+        <h2>父親</h2>
+        <ul>
+            <li v-for="home in homes" v-on:click="myfather(home.father)">
+                {{home.father}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        document.querySelector('#title').onclick=function(){
+            alert('1234');
+        }
+        var app = new Vue({
+            el: '#app',
+            data: {
+                colors: ['blue', 'red', 'black'],
+                homes: [
+                    { father: 'tom' },
+                    { father: 'bob' },
+                    { father: 'john' }
+                ]
+            },
+            methods:{
+                myfather : function(father){
+                    alert('my father is '+father)
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
