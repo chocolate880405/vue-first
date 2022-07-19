@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexof</title>
+</head>
+<body>
+    
+    <script>
+        var colors=['yellow','blue','red','pink'];
+        //刪除第二筆資料,僅刪一筆
+        colors.splice(1,1);
+        console.log(colors);
+        //詢問相符的第一筆資料索引
+        console.log(colors.indexOf('pink'));
+        //splice無第二數值則後面全部切掉
+        colors.splice(colors.indexOf('red'));
+        console.log(colors);
+
+    </script>
+</body>
+</html>
